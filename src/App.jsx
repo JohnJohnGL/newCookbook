@@ -1,7 +1,8 @@
 import './App.css'
 import { createClient } from "contentful"
 import {useState, useEffect} from "react";
-
+import { Routes, Route } from 'react-router-dom'; 
+import FrontPage from './Components/John Components/FrontPage';
 function App() { 
 // John
 const [recipes, setRecipes] = useState([]);
@@ -16,6 +17,7 @@ useEffect(() => {
   setRecipes(entryItems.items);
 }
   getRecipes();
+  console.log(recipes);
 },[]);
 
 //Vaishali
@@ -25,7 +27,12 @@ useEffect(() => {
   return (
     <>
     {/* john */}
-      <h1>{}</h1>
+      <div className='johnDiv'>
+        <FrontPage/>
+        <Routes>
+          <Route to="/" element={<FrontPage />}/>
+        </Routes>
+      </div>
     {/* vaishali */}
 
     {/* sonia */}
