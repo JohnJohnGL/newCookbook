@@ -3,6 +3,7 @@ import { createClient } from "contentful"
 import {useState, useEffect} from "react";
 import { Routes, Route } from 'react-router-dom'; 
 import FrontPage from './Components/John Components/FrontPage';
+import RecipeCard from "./Components/RecipeCard";
 function App() { 
 // John
 const [recipes, setRecipes] = useState([]);
@@ -20,12 +21,19 @@ useEffect(() => {
   console.log(recipes);
 },[]);
 
-//Vaishali
 
-//Sonia
+    console.log(entryItems.items);
+    setRecipes(entryItems.items);
+  }
+  useEffect(() => {
+    getRecipes();
+  }, []); //Sonia
+
+  //Vaishali
 
   return (
     <>
+
     {/* john */}
       <div className='johnDiv'>
         <FrontPage/>
@@ -35,10 +43,14 @@ useEffect(() => {
       </div>
     {/* vaishali */}
 
-    {/* sonia */}
-      
+      {/* sonia */}
+      <div className="sonia-card">
+        {recipes.map((recipe, index) => (
+          <RecipeCard key={index} recipe={recipe} />
+        ))}
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

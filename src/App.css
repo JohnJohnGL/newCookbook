@@ -1,3 +1,7 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* John */
 .johnLogo{
     width: 50px;
@@ -120,3 +124,38 @@ body{
 /* Vaishali */
 
 /* Sonia */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#recipes {
+  box-sizing: border-box;
+  background-color: blanchedalmond;
+  max-width: 1030px;
+  min-height: 100vh;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+
+.card1 {
+  width: 200px;
+  background-color: antiquewhite;
+  margin: 10px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.card-name {
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-body {
+  padding: 10px;
+}
