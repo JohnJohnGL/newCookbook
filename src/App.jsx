@@ -3,6 +3,7 @@ import { createClient } from "contentful"
 import {useState, useEffect} from "react";
 import { Routes, Route } from 'react-router-dom'; 
 import FrontPage from './Components/John Components/FrontPage';
+import MiddlePage from './Components/MiddlePage'
 function App() { 
 // John
 const [recipes, setRecipes] = useState([]);
@@ -30,7 +31,7 @@ useEffect(() => {
       <div className='johnDiv'>
         <FrontPage/>
         <Routes>
-          <Route to="/" element={<FrontPage />}/>
+          <Route path="/" element={<FrontPage />}/>
         </Routes>
       </div>
     {/* vaishali */}
