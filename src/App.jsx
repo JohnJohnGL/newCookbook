@@ -10,18 +10,18 @@ function App() {
     space: "z6djbtsjwacx",
     accessToken: "btwYTx3RnBmekwMDx69C54Rk2IiPLtq9qzG8e3e7p1s",
   });
+
+  async function getRecipes() {
+    const entryItems = await client.getEntries();
+
+    console.log(entryItems.items);
+    setRecipes(entryItems.items);
+  }
   useEffect(() => {
-    async function getRecipes() {
-      const entryItems = await client.getEntries();
-      console.log(entryItems.items);
-      setRecipes(entryItems.items);
-    }
     getRecipes();
-  }, []);
+  }, []); //Sonia
 
   //Vaishali
-
-  //Sonia
 
   return (
     <>
@@ -30,6 +30,11 @@ function App() {
       {/* vaishali */}
 
       {/* sonia */}
+      <div className="sonia-card">
+        {recipes.map((recipe, index) => (
+          <RecipeCard key={index} recipe={recipe} />
+        ))}
+      </div>
     </>
   );
 }
