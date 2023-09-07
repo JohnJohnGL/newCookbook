@@ -21,13 +21,7 @@ useEffect(() => {
   console.log(recipes);
 },[]);
 
-
-    console.log(entryItems.items);
-    setRecipes(entryItems.items);
-  }
-  useEffect(() => {
-    getRecipes();
-  }, []); //Sonia
+ //Sonia
 
   //Vaishali
 
@@ -40,14 +34,6 @@ useEffect(() => {
         <Routes>
           <Route to="/" element={<FrontPage />}/>
         </Routes>
-      </div>
-    {/* vaishali */}
-
-      {/* sonia */}
-      <div className="sonia-card">
-        {recipes.map((recipe, index) => (
-          <RecipeCard key={index} recipe={recipe} />
-        ))}
       </div>
     </>
   );
