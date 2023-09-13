@@ -7,6 +7,7 @@ import { NavLink, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import SlovakPage from "./SlovakPage";
+import { useParams } from "react-router-dom";
 
 export default function RecipeCard() {
   const navigate = useNavigate();
@@ -30,7 +31,16 @@ export default function RecipeCard() {
       <Navbar />
 
       {recipes.map((recipe) => (
-        <SlovakPage key={recipe.sys.id} recipe={recipe} />
+        <div className="list-s" key={recipe.sys.id} recipe={recipe}>
+          <Link to={"/recipecard/${recipe.sys.id}"}>
+            {" "}
+            <h1>{recipe.fields.recipeName}</h1>{" "}
+            <img
+              className="img-s"
+              src={recipe.fields.picture.fields.file.url}
+            />
+          </Link>
+        </div>
       ))}
 
       {/*    <div className="card1">
