@@ -13,6 +13,7 @@ body{
 }
 .johnLink{
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -24,13 +25,7 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: 0.3s ease;
 }
-.johnDiv{
-    background-image: url("./assets/1000_F_252124067_aCtp9ZD934RboKmjJzkXiwYDL7XkNjpn.jpg");
-    height: 100vh;
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position: center center;
-}
+
 .johnLink:hover{
     background-color: grey;
 }
@@ -117,6 +112,67 @@ body{
     width: 50%;
     margin-right:5% ;
 }
+.johnEverything{
+    background-image: url("./assets/1000_F_252124067_aCtp9ZD934RboKmjJzkXiwYDL7XkNjpn.jpg");
+    height: 100vh;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center;
+}
+.johnRecipies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid grey 20px;
+    height: 100vh;
+    background-color: lightslategray;
+}
+#johnRecipe{
+    border: 5px solid grey;
+    margin: 2%;
+    height: 25vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    text-align: center;
+    text-decoration: none;
+}
+.johnNameG{
+    color: white;
+    background-color: grey;
+
+}
+.johnGreek{
+    background-image: url("./assets/Unknown.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center;
+    height: 100%;
+}
+.johnSlovak{
+    background-image: url("./assets/Unknown.jpeg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center;
+    height: 100%;
+}
+.johnNameS{
+    color: white;
+    background-color: grey;
+}
+.johnIndian{
+    background-image: url("./assets/Unknown-1.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center;
+    height: 100%;
+}
+.johnNameI{
+    color: white;
+    background-color: grey;
+}
+
 /* Vaishali */
 
 /* Sonia */
