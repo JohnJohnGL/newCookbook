@@ -3,6 +3,7 @@ import { createClient } from "contentful"
 import {useState, useEffect} from "react";
 import { Routes, Route } from 'react-router-dom'; 
 import FrontPage from './Components/John Components/FrontPage';
+import RecipeCard from "./Components/RecipeCard";
 function App() { 
 // John
 const [recipe, setRecipes] = useState([]);
@@ -28,22 +29,24 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 });
 
-//Vaishali
+ //Sonia
 
-//Sonia
+  //Vaishali
 
   return (
     <>
+
     {/* john */}
         <Routes>
           <Route path="/" element={<FrontPage />}/>
         </Routes>
+
     {/* vaishali */}
 
     {/* sonia */}
-      
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
