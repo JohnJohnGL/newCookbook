@@ -6,7 +6,7 @@ import FrontPage from './Components/John Components/FrontPage';
 import RecipeCard from "./Components/RecipeCard";
 function App() { 
 // John
-const [recipes, setRecipes] = useState([]);
+const [recipe, setRecipes] = useState([]);
 const client = createClient({
   space:"z6djbtsjwacx",
   accessToken:"btwYTx3RnBmekwMDx69C54Rk2IiPLtq9qzG8e3e7p1s"
@@ -18,8 +18,16 @@ useEffect(() => {
   setRecipes(entryItems.items);
 }
   getRecipes();
-  console.log(recipes);
+  console.log(recipe)
 },[]);
+document.addEventListener("DOMContentLoaded", function(){
+  const scrollButton = document.getElementsByClassName("johnButton");
+  const scrollTarget = document.getElementById("johnAwesomeRecipies");
+
+  scrollButton.addEventListener("click", function() {
+      scrollTarget.scrollIntoView({behavior: "smooth"});
+  });
+});
 
  //Sonia
 
@@ -29,12 +37,14 @@ useEffect(() => {
     <>
 
     {/* john */}
-      <div className='johnDiv'>
-        <FrontPage/>
         <Routes>
-          <Route to="/" element={<FrontPage />}/>
+          <Route path="/" element={<FrontPage />}/>
         </Routes>
-      </div>
+
+    {/* vaishali */}
+
+    {/* sonia */}
+
     </>
   );
 }
