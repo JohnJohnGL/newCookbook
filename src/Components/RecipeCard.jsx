@@ -29,19 +29,21 @@ export default function RecipeCard() {
   return (
     <>
       <Navbar />
-
-      {recipes.map((recipe) => (
-        <div className="list-s" key={recipe.sys.id} recipe={recipe}>
-          <Link to={"/recipecard/${recipe.sys.id}"}>
-            {" "}
-            <h1>{recipe.fields.recipeName}</h1>{" "}
-            <img
-              className="img-s"
-              src={recipe.fields.picture.fields.file.url}
-            />
-          </Link>
-        </div>
-      ))}
+      <div className="wrap-s">
+        {" "}
+        {recipes.map((recipe) => (
+          <div className="list-s" key={recipe.sys.id} recipe={recipe}>
+            <Link to={"/recipecard/${recipe.sys.id}"}>
+              {" "}
+              <h1>{recipe.fields.recipeName}</h1>{" "}
+              <img
+                className="img-s"
+                src={recipe.fields.picture.fields.file.url}
+              />
+            </Link>
+          </div>
+        ))}
+      </div>
 
       {/*    <div className="card1">
         <h1 className="card-name">Choose your taste</h1>
